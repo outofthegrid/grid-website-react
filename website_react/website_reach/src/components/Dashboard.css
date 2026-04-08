@@ -1,0 +1,41 @@
+.dashbord {
+    font-family: "Segoe UI";
+    font-size: 16px;
+    font-weight: 400;
+    font-stretch: expanded;
+    margin: 0;
+    background-color: ghostwhite;
+}
+#main-body{
+        padding-bottom: 20px;
+    padding-left: 320px;
+    padding-top: 50px;
+    padding-right: 85px;
+}
+#daily-article{
+    position: relative;
+    margin-right: 2%;
+    border-radius: 12px;
+    padding: 2% 4% 3% 4%;
+    background-color: rgba(218, 218, 218, 0.5);
+}
+#daily-article a{
+    margin-block-end: 5px;
+    color: #394f79;
+    font-weight: 500;
+}
+#daily-article h4:hover{
+    margin-block-end: 5px;
+    color: #3064c5;
+}
+#daily-article-date{
+    font-size: 14px;
+    /* line-height: 4px; */
+    font-weight: lighter;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border-bottom: solid 2px lightsteelblue;
+    margin-bottom: 16px;
+    /* text-underline-offset : 2px;
+    text-decoration-line: underline; */
+}
