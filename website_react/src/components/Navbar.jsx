@@ -9,7 +9,7 @@ export default function Navbar({firstName}) {
     <div className='navbar'>
         <header id="main-header">
                 <div className="container">
-                    <h1>Ingrid'd Grid</h1>
+                    <h1>Ingrid's Grid</h1>
                     <div id="header-pic">
                         <img src="C:\Users\ingri\Documents\GitHub\outofthegrid\grid-website\images\profile_picture.jpg" alt="Drawing of a blonde woman looking at her phone, seen from behind."/>
                     </div>
@@ -22,7 +22,7 @@ export default function Navbar({firstName}) {
             <div className="navbar-section"><p><a href="#">Systems & Architecture</a></p></div>
             <div className="navbar-section"><p><a href="#">Misc</a></p></div>
               <div className="navbar-section-item"><a href="#">Reading list</a></div>
-              <div className="navbar-section-item"><a href="#">Recipe list</a></div>
+              {/* <div className="navbar-section-item"><a href="#">Recipe list</a></div> */}
             </div>
           </div>
         </div>
