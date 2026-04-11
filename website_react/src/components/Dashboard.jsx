@@ -74,6 +74,15 @@ const qty_articles = articles.length
 const id_article = Math.floor(Math.random() * ((qty_articles-1) - 0) + 0)
 const random_article = articles[id_article]
 
+function getAccentColor(article) {
+    const accentColorTemp = article_topics[article.topic.toLowerCase()] ? article_topics[article.topic.toLowerCase()][0]['accent-colour'] : article_topics['test'][0]['accent-colour']
+
+    return accentColorTemp
+}
+
+// Current date
+const currentDate = new Date() // .toJSON().slice(0, 10);
+
 const Dashboard = ({all_articles}) => {
 
     // Create topic tag
@@ -87,7 +96,7 @@ const Dashboard = ({all_articles}) => {
                 <div id="daily-article">
                     <div className="daily-article-header">
                         <div className="daily-article-date">
-                            <p>APR 4, 2026 (Saturday)</p>
+                            <p>{Intl.DateTimeFormat("en-US", {month: "short"}).format(currentDate).toUpperCase()} {currentDate.getDate()}, {currentDate.getFullYear()} ({Intl.DateTimeFormat("en-US", {weekday: "long"}).format(currentDate)})</p>
                         </div>
                         <div className="daily-article-topic-tag"
                             // style={{background: backgroundColor, borderColor: accentColor}}
@@ -99,6 +108,45 @@ const Dashboard = ({all_articles}) => {
                     </div>
                     <a href={random_article.url}>{random_article.title}</a>
                     <p>{random_article.description}</p>
+                </div>
+                <div className="articles-section-separator">                </div>
+                <div className="additional-articles">
+                    <div className="additional-article">
+                        <div className="additional-article-title">
+                            <a href={random_article.url}>{articles[(id_article+1) % articles.length].title}</a>
+                            <input className="article-read-checkbox" type="checkbox" />
+                        </div>
+                        <div className="additional-article-topic" style={{background: getAccentColor(articles[(id_article+1) % articles.length])}}>
+                            <p>{articles[(id_article+1) % articles.length].topic}</p>
+                        </div>
+                    </div>
+                    <div className="additional-article">
+                        <div className="additional-article-title">
+                            <a href={random_article.url}>{articles[(id_article+2) % articles.length].title}</a>
+                            <input className="article-read-checkbox" type="checkbox" />
+                        </div>
+                        <div className="additional-article-topic" style={{background: getAccentColor(articles[(id_article+2) % articles.length])}}>
+                            <p>{articles[(id_article+2) % articles.length].topic}</p>
+                        </div>
+                    </div>
+                    <div className="additional-article">
+                        <div className="additional-article-title">
+                            <a href={random_article.url}>{articles[(id_article+3) % articles.length].title}</a>
+                            <input className="article-read-checkbox" type="checkbox" />
+                        </div>
+                        <div className="additional-article-topic" style={{background: getAccentColor(articles[(id_article+3) % articles.length])}}>
+                            <p>{articles[(id_article+3) % articles.length].topic}</p>
+                        </div>
+                    </div>
+                    <div className="additional-article">
+                        <div className="additional-article-title">
+                            <a href={random_article.url}>{articles[(id_article+4) % articles.length].title}</a>
+                            <input className="article-read-checkbox" type="checkbox" />
+                        </div>
+                        <div className="additional-article-topic" style={{background: getAccentColor(articles[(id_article+4) % articles.length])}}>
+                            <p>{articles[(id_article+4) % articles.length].topic}</p>
+                        </div>
+                    </div>
                 </div>
             </section>
         </section>
