@@ -107,6 +107,7 @@ const Dashboard = ({all_articles}) => {
                         </div>
                     </div>
                     <a href={random_article.url}>{random_article.title}</a>
+                    <input className="article-read-checkbox" type="checkbox" />
                     <p>{random_article.description}</p>
                 </div>
                 <div className="articles-section-separator">                </div>
