@@ -114,7 +114,7 @@ const Dashboard = ({all_articles}) => {
                 <div className="additional-articles">
                     <div className="additional-article">
                         <div className="additional-article-title">
-                            <a href={random_article.url}>{articles[(id_article+1) % articles.length].title}</a>
+                            <a href={articles[(id_article+1) % articles.length].url}>{articles[(id_article+1) % articles.length].title}</a>
                             <input className="article-read-checkbox" type="checkbox" />
                         </div>
                         <div className="additional-article-topic" style={{background: getAccentColor(articles[(id_article+1) % articles.length])}}>
@@ -123,7 +123,7 @@ const Dashboard = ({all_articles}) => {
                     </div>
                     <div className="additional-article">
                         <div className="additional-article-title">
-                            <a href={random_article.url}>{articles[(id_article+2) % articles.length].title}</a>
+                            <a href={articles[(id_article+2) % articles.length].url}>{articles[(id_article+2) % articles.length].title}</a>
                             <input className="article-read-checkbox" type="checkbox" />
                         </div>
                         <div className="additional-article-topic" style={{background: getAccentColor(articles[(id_article+2) % articles.length])}}>
@@ -132,7 +132,7 @@ const Dashboard = ({all_articles}) => {
                     </div>
                     <div className="additional-article">
                         <div className="additional-article-title">
-                            <a href={random_article.url}>{articles[(id_article+3) % articles.length].title}</a>
+                            <a href={articles[(id_article+3) % articles.length].url}>{articles[(id_article+3) % articles.length].title}</a>
                             <input className="article-read-checkbox" type="checkbox" />
                         </div>
                         <div className="additional-article-topic" style={{background: getAccentColor(articles[(id_article+3) % articles.length])}}>
@@ -141,7 +141,7 @@ const Dashboard = ({all_articles}) => {
                     </div>
                     <div className="additional-article">
                         <div className="additional-article-title">
-                            <a href={random_article.url}>{articles[(id_article+4) % articles.length].title}</a>
+                            <a href={articles[(id_article+4) % articles.length].url}>{articles[(id_article+4) % articles.length].title}</a>
                             <input className="article-read-checkbox" type="checkbox" />
                         </div>
                         <div className="additional-article-topic" style={{background: getAccentColor(articles[(id_article+4) % articles.length])}}>

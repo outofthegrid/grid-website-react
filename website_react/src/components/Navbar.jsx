@@ -20,6 +20,7 @@ export default function Navbar({firstName}) {
             <div className="navbar-section"><p><a href="#">Systems & Architecture</a></p></div>
             <div className="navbar-section"><p><a href="#">Misc</a></p></div>
               <div className="navbar-section-item"><a href="#">Reading list</a></div>
+              <div className="navbar-section-item"><a href="#">Instagram likes</a></div>
               {/* <div className="navbar-section-item"><a href="#">Recipe list</a></div> */}
             </div>
           </div>
